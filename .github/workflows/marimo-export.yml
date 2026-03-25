@@ -1,4 +1,7 @@
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -22,11 +25,12 @@ jobs:
 
       - name: 📄 Export notebook
         run: |
+          mkdir -p docs
           for file in notebooks/*; \
           do \
-            without_extension=$${file#notebooks/}; \
-            without_extension=$${without_extension%.*}; \
-            uv run marimo export html-wasm "$$file" -o docs/"$$without_extension".html --mode edit; \
+            without_extension=${file#notebooks/}; \
+            without_extension=${without_extension%.*}; \
+            uv run marimo export html-wasm "$file" -o docs/"$without_extension".html --mode edit; \
           done
 
       - name: 📦 Upload Pages Artifact
