@@ -30,13 +30,13 @@ jobs:
           do \
             without_extension=${file#notebooks/}; \
             without_extension=${without_extension%.*}; \
-            uv run marimo export html-wasm "$file" -o docs/"$without_extension".html --mode edit; \
+            uv run marimo export html-wasm "$file" -o site/"$without_extension".html --mode edit; \
           done
 
       - name: 📦 Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: site
 
   deploy:
     needs: build
