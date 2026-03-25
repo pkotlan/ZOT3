@@ -21,7 +21,7 @@ def _(mo):
     - Matematické a statistické funkce
     - Lineární algebru, Fourierovu transformaci a náhodná čísla
 
-    **Doporučené zdroje (na doma):**
+    **Zdroje:**
     - [NumPy Documentation](https://numpy.org/doc/)
     - [NumPy Tutorials](https://numpy.org/learn/)
     - [NumPy Cheat Sheet](https://numpy.org/devdocs/user/basics.broadcasting.html)
