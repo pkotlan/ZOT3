@@ -1,0 +1,19 @@
+:root {
+  --accent: #ea9d34;
+}
+
+@font-face {
+  font-family: "Monaspace Xenon NF";
+  src: url('./Monaspace Xenon Var.woff2') format('woff2'),
+    url('./Monaspace Xenon Var.woff') format('woff');
+}
+
+body {
+  background-color: #191919;
+  color: white;
+  font-family: "Monaspace Xenon NF", monospace;
+}
+
+a {
+  color: var(--accent);
+}
